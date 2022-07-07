@@ -1,4 +1,4 @@
-name: Test
+name: TVBoxBuilder
 
 on:
   schedule:
@@ -75,9 +75,7 @@ jobs:
           tag_name: ${{ env.tag }}
           body: ${{ env.commit }}
           files: |
-            TVBoxOSC/apk/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            TVBoxOSC/apk/TVBox_release_${{ env.tag }}.apk
       - name: Push to master
         if: ${{ env.commit }}
         run: |
