@@ -76,6 +76,9 @@ jobs:
           body: ${{ env.commit }}
           files: |
             TVBoxOSC/apk/TVBox_release_${{ env.tag }}.apk
+            TVBoxOSC/apk/source.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
       - name: Push to master
         if: ${{ env.commit }}
         run: |
