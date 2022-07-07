@@ -2,7 +2,7 @@ name: TVBoxBuilder
 
 on:
   schedule:
-    - cron: 15,45 0-18 * * *
+    - cron: 15 10-22 * * *
   push:
     branches:
       - master
