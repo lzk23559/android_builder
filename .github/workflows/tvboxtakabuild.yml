@@ -1,4 +1,4 @@
-name: TVBoxBuilder
+name: TVBoxtakaBuilder
 
 on:
   schedule:
