@@ -1,6 +1,8 @@
 name: TVBox_dual_Builder
 
 on:
+  schedule:
+    cron: 15,45 0-18 * * *
   push:
     branches:
       - master
