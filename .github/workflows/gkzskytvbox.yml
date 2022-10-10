@@ -30,11 +30,11 @@ jobs:
 
         run: |
 
-          upstreamCode=https://github.com/gkzsky/tvtsos
+          upstreamCode=https://github.com/gjf026/TVBoxOS
 
           echo "upstreamCode=$upstreamCode" >> $GITHUB_ENV
 
-          commit=$(curl -sL $upstreamCode/commits/main |grep -o '/gkzsky/tvtsos/commit/[a-z0-9]\+' |head -1 | cut -d\/ -f5)
+          commit=$(curl -sL $upstreamCode/commits/main |grep -o '/gjf026/TVBoxOS/commit/[a-z0-9]\+' |head -1 | cut -d\/ -f5)
 
           if ! git log --oneline |grep -q "$commit"; then
 
