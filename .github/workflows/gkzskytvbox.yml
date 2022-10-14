@@ -1,4 +1,4 @@
-name: TVBoxmaoheBuilder
+name: TVBoselfBuilder
 
 on:
 
@@ -30,11 +30,11 @@ jobs:
 
         run: |
 
-          upstreamCode=https://github.com/kensonmiao/CatVodTVOSC
+          upstreamCode=https://github.com/lzk23559/TVBoxOS
 
           echo "upstreamCode=$upstreamCode" >> $GITHUB_ENV
 
-          commit=$(curl -sL $upstreamCode/commits/main |grep -o '/kensonmiao/CatVodTVOSC/commit/[a-z0-9]\+' |head -1 | cut -d\/ -f5)
+          commit=$(curl -sL $upstreamCode/commits/main |grep -o '/lzk23559/TVBoxOS/commit/[a-z0-9]\+' |head -1 | cut -d\/ -f5)
 
           if ! git log --oneline |grep -q "$commit"; then
 
