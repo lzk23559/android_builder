@@ -20,7 +20,7 @@ jobs:
       matrix:
         include:
           - userName: lzk23559
-            repoName: TVBoxOS
+            repoName: takaBox
             branchName: main
     steps:
       - name: Checkout
