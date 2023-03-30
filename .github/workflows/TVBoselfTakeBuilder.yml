@@ -20,7 +20,7 @@ jobs:
       matrix:
         include:
           - userName: lzk23559
-            repoName: TakaBoxMod
+            repoName: takaBox
             branchName: main
     steps:
       - name: Checkout
