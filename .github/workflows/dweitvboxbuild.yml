@@ -1,4 +1,4 @@
-name: TVBoxDweiBuilder
+name: TVBoxMobileBuilder
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - name: Check New Commit
         run: |
-          upstreamCode=https://github.com/Dwei1120/tv1.5
+          upstreamCode=https://github.com/XiaoRanLiu3119/TVBoxOS-Mobile
           echo "upstreamCode=$upstreamCode" >> $GITHUB_ENV
           commit=$(curl -sL $upstreamCode/commits/main |grep -o '/Dwei1120/tv1.5/commit/[a-z0-9]\+' |head -1 | cut -d\/ -f5)
           if ! git log --oneline |grep -q "$commit"; then
