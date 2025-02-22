@@ -33,7 +33,7 @@ jobs:
             branchName: main
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Check New Commit
@@ -106,7 +106,7 @@ jobs:
             mv "$file" apk/TVBox_${{ matrix.userName }}_${{ env.tag }}.apk
           done
       - name: Upload App To Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ env.commit }}
         with:
           name: ${{ matrix.userName }}-${{ matrix.repoName }}
